@@ -15,7 +15,7 @@ def api(sido) :
     params = "?" + urlencode({
         quote_plus('serviceKey'): secret["SECRET"],
         quote_plus('returnType'): 'json',
-        quote_plus('numOfRows'): '5',
+        quote_plus('numOfRows'): '10',
         quote_plus('pageNo'): '1',
         quote_plus('sidoName'): sido,
         quote_plus('ver'): '1.3',
