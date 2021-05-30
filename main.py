@@ -6,7 +6,8 @@ print("의용메카트로닉스공학과 20195277 하유민")
 # 3. 장소를 선택하면 그 장소에 맞는 출력 값을 가져온다. 
 # 4. 장소를 선택 => 선택 값을 api 파일로 보내줌 => 그 장소 값에 맞는 결과를 호출 => 다시 tk 로 보내줌 => tk 에서 결과 출력 
 
-from tkinter import * 
+from tkinter import *
+import tkinter.font as tkFont 
 import tkinter.messagebox
 # api 모듈 불러오기 
 from api import api
@@ -29,7 +30,7 @@ def send() :
     # api 함수로 선택된 지역을 인자(placeS)로 보내주고, 결과값을 result 에 저장 
     result = api(placeS)
     
-    # send 함수는 change 함수를 리턴, result 값을 인자로 담아 change 에 보내준다. 
+    # send 함수는 change 함수를 리턴, result 값을 인자로 담아 dataset 에 보내준다. 
     return dataset(result)
 
 # api로부터 받은 결과 값을 gui 로 출력해주는 함수 . 
@@ -111,8 +112,11 @@ def close():
         # 예 를 누를 경우 프로그램 종료 
         site.destroy()
 
+# 안내문의 폰트 크기를 더 크게 
+fontStyle = tkFont.Font(size=12)
+
 # 안내문 띄우기     
-Label(site, text = "각 지역의 대기 상태를 확인해보세요.").grid(row=0, columnspan=6)
+Label(site, text = "각 지역의 대기 상태를 확인해보세요.", font=fontStyle).grid(row=0, columnspan=6)
 
 # 선택 받을 지역을 optionmenu 로 띄우기. 선택 받은 값은 selected 변수에 저장 
 OptionMenu(site, selected, *place).grid(row=1, columnspan=6)
