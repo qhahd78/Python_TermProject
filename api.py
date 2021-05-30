@@ -13,7 +13,7 @@ import tkinter.messagebox
 def api(sido) : 
     # 오류 없이 작동 된다면 아래의 코드 실행. 
     try: 
-        url = 'http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtrvnRltmMesureDnsty'
+        url = 'http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty'
 
         # 시크릿 키 들어있는 secret.json 파일 열기 
         with open ("secret.json") as file : 
