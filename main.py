@@ -9,7 +9,7 @@ print("의용메카트로닉스공학과 20195277 하유민")
 from tkinter import * 
 import tkinter.messagebox
 # api 모듈 불러오기 
-from apitest import api
+from api import api
 
 site = Tk()
 site.geometry('900x320+200+200')
